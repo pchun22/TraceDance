@@ -14,6 +14,7 @@
 
 <body>
 
+  <!--
 <h1>This is going to be my dance website!!</h1>
 
 <p>input the video URL and click the button</p>
@@ -56,6 +57,56 @@ document.querySelector('#get-access').addEventListener('click', async function i
   }
 })
 </script>
+-->
+
+
+  <h1>This is going to be my dance website</h1>
+  <h2 title="caption">Ta da</h2>
+  <p style="color:blue">The goal is to get a video and a live video feed side by side for comparison</p>
+  
+  <p> input the video URL and click the button: </p>
+  <input id="videoURL"/>
+  
+  <button onclick="loadVideo()">Go!</button>
+  
+  <iframe id="youtubeWindow" width="560" height="315" src="https://www.youtube.com/watch?v=-SINPQnGUZk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/-SINPQnGUZk" frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  
+  <p id="test"></p>
+  
+  <div id="container">
+    <video autoplay="true" id="videoElement">
+    
+    </video>
+  </div>
+  
+  
+  <script>
+  function loadVideo() {
+    var vidURL;
+    vidURL = document.getElementById("videoURL").value;
+    document.getElementById("youtubeWindow").src = vidURL;
+    document.getElementById("test").innerHTML = vidURL;
+  }
+  
+  var video = document.querySelector("#videoElement");
+  
+  if (navigator.mediaDevices.getUserMedia) {
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then(function (stream) {
+        video.srcObject = stream;
+      })
+      .catch(function (err0r) {
+        console.log("Something went wrong!");
+      });
+  }
+  
+  
+  
+  </script>
+
+
 
 </body>
 </html>
