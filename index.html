@@ -42,7 +42,19 @@
 
 
 <script>
-
+document.querySelector('#get-access').addEventListener('click', async function init(e){
+  try{
+    const stream = await navigator.mediaDevices.getUserMedia({
+      video: true,
+      audio: false
+    })
+    document.querySelector('video').srcObject = stream
+    document.querySlector('#get-access').setAttribute('hidden', true)
+  } catch (error) {
+    alert(`${errorr.name}`)
+    console.error(error)
+  }
+})
 </script>
 
 </body>
