@@ -1,0 +1,22 @@
+.container {
+  border: 10px #333 solid;
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1)
+  height:700;
+  width: 560;
+}
+
+#left {
+  float: left;
+  width: 45%;
+}
+
+#right {
+  float: right;
+  Width: 45%;
+}
+
+#videoElement {
+  width: 45%
+  background-color: #666;
+}
