@@ -15,10 +15,10 @@
 #right {
   float: right;
   height: 700;
-  Width: 45%;
+  width: 45%;
 }
 
 #videoElement {
-  width: 45%;
+  width: 75%;
   background-color: #666;
 }
