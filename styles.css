@@ -19,6 +19,8 @@
 }
 
 #videoElement {
-  width: 75%;
+  float: right;
+  width: 45%;
+  -webkit-transform: scaleX(-1);
   background-color: #666;
 }
