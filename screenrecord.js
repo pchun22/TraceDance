@@ -10,7 +10,7 @@ $(".video-url").change(function(){
     }
 
     var embedLink = "https://www.youtube.com/embed/" + id;
-
+    console.log("updating youtube video to " + embedLink)
     $(".yt-video").attr("src", embedLink)
 });
 
