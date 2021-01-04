@@ -1,3 +1,20 @@
+$(".video-url").change(function(){
+    var url= $(".video-url").val();
+    var start = url.indexOf("watch?v=");
+    var end = url.indexOf("&");
+    var id = ""
+    if(start > -1){
+        id = url.substring(start + "watch?v=".length, end)
+    } else {
+        id = url.split("/").pop()
+    }
+
+    var embedLink = "https://www.youtube.com/embed/" + id;
+
+    $(".yt-video").attr("src", embedLink)
+});
+
+
 // set up elements
 const mirror = $(".cam-mirror");
 const start = $("#start-record");
