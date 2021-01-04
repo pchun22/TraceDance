@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Trace Dance</title>
+
+    <!-- Google fonts -->
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modified.css">
+
+    <!-- Font-awesome -->
+    <script src="https://kit.fontawesome.com/70afd36d2f.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- Header -->
+
+    <div id="live-state">
+    <div>
+        <h1 class="title">Trace</h1>
+    </div>
+
+    <!-- screens -->
+
+    <div class="container-fluid row">
+        <div class="col-lg-6 p-0">
+
+            <div class="yt-container">
+                <div id="yt-player"></div>
+                <!-- <iframe type="text/html" width="100%" height=500px src="https://www.youtube.com/embed/xw6TLiB-qHs"></iframe> -->
+            </div>
+
+            <div class="yt-info">
+                <div class="row">
+                    <div class="col">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <!-- <div class="col">
+                        <button id="yt-play" class="btn"><i class="fas fa-play"></i></button>
+                    </div> -->
+                    <div class="col">
+                        <input type="checkbox" class="yt-mirror">
+                        <label for="yt-mirror">Mirror</label>
+                        <!-- <input type="checkbox" class="yt-loop">
+                        <label for="loop">Loop</label> -->
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-10">
+                        <form>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control video-url" placeholder="Video URL">
+                                </div>
+                                <!-- <div class="col-3">
+                                    <input type="number" class="form-control start-time" placeholder="Start">
+                                </div>
+                                <div class="col-3">
+                                    <input type="number" class="form-control end-time" placeholder="End">
+                                </div> -->
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- <div class="col-2">
+                        <button id="yt-submit" class="btn btn-primary">Go!</button>
+                    </div> -->
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="col-lg-6 p-0">
+
+            <div class="cam-container mirrored">
+                <video id="camera" width="100%" height="500px" autoplay muted></video>
+                <video id="recording" class="hidden" width="100%" height="500px" controls></video>
+            </div>
+
+            <div class="cam-info">
+                <i class="fas fa-video"></i>
+            </div>
+
+            <div>
+                <button id="start-record" class="btn btn-primary">Start</button>
+                <button id="stop-record" class="btn btn-primary">Stop</button>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    <div id="recorded-state" class="hidden">
+        <button class="go-back" type="button" name="button">Back</button>
+        <video id="video-recording" controls></video>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="screenrecord.js" charset="utf-8"></script>
+    <script src="youtube.js" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+/* HTML elements */
+body{
+  text-align: center;
+}
+
+.yt-window{
+  width: 100%;
+  height: 500px;
+}
+
+/* Selectors */
+.title{
+  margin-top: 5%;
+}
+
+.container-fluid{
+  margin: 0
+}
+
+.yt-container{
+  background-color: red;
+  padding: 2%;
+  margin: 2% 0%;
+}
+
+.yt-info{
+  text-align: left;
+}
+
+.cam-container{
+  background-color: blue;
+  padding: 2%;
+  margin: 2% 0%;
+}
+
+.cam-info{
+  text-align: right;
+}
+
+.hidden{
+  display: None;
+}
+
+.blocker{
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  background-color: green;
+  opacity: 50%;
+  z-index:1;
+}
+
+#video-recording{
+    width: 90%
+}

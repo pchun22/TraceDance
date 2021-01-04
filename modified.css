@@ -1,0 +1,5 @@
+/* class descriptors for modifications */
+
+.mirrored{
+  -webkit-transform: scaleX(-1);
+}
