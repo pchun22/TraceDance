@@ -1,3 +1,5 @@
+
+
 /* HTML elements */
 body{
   text-align: center;
@@ -9,9 +11,6 @@ body{
 }
 
 /* Selectors */
-.title{
-  margin-top: 5%;
-}
 
 .container-fluid{
   margin: 0
@@ -19,8 +18,8 @@ body{
 
 .yt-container{
   background-color: red;
-  padding: 2%;
-  margin: 2% 0%;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .yt-info{
@@ -29,8 +28,8 @@ body{
 
 .cam-container{
   background-color: blue;
-  padding: 2%;
-  margin: 2% 0%;
+  padding: 10px;
+  margin: 10px 0;
 }
 
 .cam-info{
@@ -52,4 +51,12 @@ body{
 
 #video-recording{
     width: 90%
+}
+
+.zoom-wrapper {
+  overflow: hidden;
+}
+
+.row{
+  margin: 0;
 }

@@ -1,3 +1,13 @@
+function ytZoom(){ 
+	zoomlevel = $('#yt-zoomer')[0].valueAsNumber;
+    $('.yt-video')[0].style.transform = "scale("+zoomlevel+")";
+}
+
+function camZoom(){ 
+	zoomlevel = $('#cam-zoomer')[0].valueAsNumber;
+    $('#camera')[0].style.transform = "scale("+zoomlevel+")";
+}
+
 $(".video-url").change(function(){
     var url= $(".video-url").val();
     var start = url.indexOf("watch?v=");
